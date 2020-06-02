@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
     private ArrayList<Card> cards;
@@ -20,15 +21,35 @@ public class Deck {
 
     // Methods
     public void shuffle() {
+        // ArrayList<Card> tmpDeck = new ArrayList<Card>();
+        // use random
+        Random random = new Random();
 
+        // temporary Card
+        Card temp;
+
+        int j;
+        for (int i = 0; i < this.cards.size(); i++) {
+            // generate random card j to swap i's value with
+            j = random.nextInt(this.cards.size());
+
+            // do swap
+            temp = this.cards.get(i);
+            this.cards.set(i, this.cards.get(j));
+            this.cards.set(j, temp);
+        }
     }
 
-    public void removeCard() {
-
+    public void removeCard(int i) {
+        this.cards.remove(i);
     }
 
-    public Card getCard() {
+    public Card getCard(int i) {
+        return this.cards.get(i);
+    }
 
+    public void addCard(Card addCard) {
+        this.cards.add(addCard);
     }
 
     public void draw() {
@@ -36,7 +57,13 @@ public class Deck {
     }
 
     public String toString() {
-        return " ";
+        String cardListOutput = "";
+        int i = 0;
+        for (Card aCard : this.cards) {
+            cardListOutput += "\n" + i + " " + aCard.toString();
+            i++;
+        }
+        return cardListOutput;
     }
 
     public void moveAllToDeck() {
