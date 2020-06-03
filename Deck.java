@@ -52,30 +52,30 @@ public class Deck {
         this.cards.add(addCard);
     }
 
-    public void draw() {
-
+    // method that draws from the deck
+    public void draw(Deck comingFrom) {
+        this.cards.add(comingFrom.getCard(0));
+        comingFrom.removeCard(0);
     }
 
     public String toString() {
         String cardListOutput = "";
-        int i = 0;
         for (Card aCard : this.cards) {
-            cardListOutput += "\n" + i + " " + aCard.toString();
-            i++;
+            cardListOutput += "\n " + " " + aCard.toString();
         }
         return cardListOutput;
     }
 
-    public void moveAllToDeck() {
+    // public void moveAllToDeck() {
 
-    }
+    // }
 
-    public int deckSize() {
-        return 0;
-    }
+    // public int deckSize() {
+    // return 0;
+    // }
 
-    public int cardsValue() {
-        return 0;
-    }
+    // public int cardsValue() {
+    // return 0;
+    // }
 
 }
