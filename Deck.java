@@ -66,13 +66,22 @@ public class Deck {
         return cardListOutput;
     }
 
-    // public void moveAllToDeck() {
+    public void moveAllToDeck(Deck moveTo) {
+        int thisDeckSize = this.cards.size();
 
-    // }
+        // put cards into moveTo Deck
+        for (int i = 0; i < thisDeckSize; i++) {
+            moveTo.addCard(this.getCard(i));
+        }
 
-    // public int deckSize() {
-    // return 0;
-    // }
+        for (int i = 0; i < thisDeckSize; i++) {
+            this.removeCard(0);
+        }
+    }
+
+    public int deckSize() {
+        return this.cards.size();
+    }
 
     public int cardsValue() {
         int totalValue = 0;
