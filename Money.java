@@ -1,42 +1,42 @@
-public class Money {
+// public class Money {
 
-    // variables
-    private double initialBudget = 200;
-    private double betAmount;
-    private double money; // plus minus bets / wins / loss
+// // variables
+// private double initialBudget = 200;
+// private double betAmount;
+// private double money; // plus minus bets / wins / loss
 
-    // constructor
+// // constructor
 
-    public money(double betAmount){
-        this.betAmmount = betAmount;
-    }
+// public money(double betAmount){
+// this.betAmmount = betAmount;
+// }
 
-    // Budget getter
-    public double getInitialBudget() {
-        return initialBudget;
-    }
+// // Budget getter
+// public double getInitialBudget() {
+// return initialBudget;
+// }
 
-    // Budget setter
+// // Budget setter
 
-    // public void setInitialBudget(double initialBudget){
-    // this.initialBudger = initialBudget;
-    // }
+// // public void setInitialBudget(double initialBudget){
+// // this.initialBudger = initialBudget;
+// // }
 
-    // Bet amount getter
+// // Bet amount getter
 
-    public double getBetAmount() {
-        return betAmount;
-    }
+// public double getBetAmount() {
+// return betAmount;
+// }
 
-    // Bet amount Setter
+// // Bet amount Setter
 
-    public void setBetAmount(double betAmount) {
-        this.betAmount = betAmount;
-    }
+// public void setBetAmount(double betAmount) {
+// this.betAmount = betAmount;
+// }
 
-    public double getMoney() {
-        // initial budget minus bet amount / wins / loss
+// public double getMoney() {
+// // initial budget minus bet amount / wins / loss
 
-    }
+// }
 
-}
+// }

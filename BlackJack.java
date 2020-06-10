@@ -10,7 +10,13 @@ public class BlackJack {
         playingDeck.createFullDeck();
         playingDeck.shuffle();
 
-        System.out.println(playingDeck);
+        // System.out.println(playingDeck);
 
+        Deck playerHand = new Deck();
+        playerHand.draw(playingDeck);
+        playerHand.draw(playingDeck);
+
+        System.out.println(playerHand.cardsValue());
+        System.out.println("You drew: " + playerHand.getCard(playerHand.deckSize() - 1).toString());
     }
 }
